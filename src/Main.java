@@ -16,7 +16,7 @@ class Main{
             System.out.println("Senha forte");
         }catch (SenhaInvalidaException e)
         {
-            System.out.println(SenhaInvalidaException.getMensagem());
+            System.out.println("Erro: "+ e.getMessage());
         }
 
 
