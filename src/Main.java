@@ -2,17 +2,21 @@ import java.util.Scanner;
 
 class Main{
     static void main() {
+
         System.out.println("Try e catch");
         Scanner  teclado = new Scanner(System.in);
         System.out.println("Digite um número: ");
-        double primeiroNumero = teclado.nextDouble();
-
+        int  primeiroNumero = teclado.nextInt();
         System.out.println("Digite outro número: ");
-        double segundoNumero = teclado.nextDouble();
+        int segundoNumero = teclado.nextInt();
 
+        try{
 
-        System.out.println(primeiroNumero);
-        System.out.println(segundoNumero);
-
+        int resultado = primeiroNumero / segundoNumero;
+            System.out.println("Resultado da div" + resultado);
+        }catch (ArithmeticException  e)
+        {
+            System.out.println("Erro");
+        }
     }
 }
